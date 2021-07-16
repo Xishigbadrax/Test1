@@ -34,7 +34,7 @@ function Sum1(props) {
     <div>
       <form>
         <label>
-          Сум
+          Сумм
           <select onChange={(e) => setSumName(e.target.value)}>
             <option></option>
             <option value="Asum1">{Arhangai.sum1.name}</option>
@@ -73,7 +73,7 @@ function Sum2(props) {
     <div>
       <form>
         <label>
-          Сум
+          Сумм
           <select onChange={(e) => setSumName(e.target.value)}>
             <option></option>
             <option value="Hsum1">{Hentii.sum1.name}</option>
