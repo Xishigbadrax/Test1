@@ -1,9 +1,24 @@
 import Bag from "../bag";
+import { MenuItem } from "@material-ui/core";
 import React, { useState } from "react";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import Grid from "@material-ui/core/Grid";
 export default function Sum(props) {
   console.log(props.aimagName + "<=====");
+  const project = () => {
+    switch (props.aimagName) {
+      case "Arhangai":
+        return <Sum1 />;
+      case "Hentii":
+        return <Sum2 />;
 
-  return <div>{props.aimagName == "Arhangai" ? <Sum1 /> : <Sum2 />}</div>;
+      default:
+        return null;
+    }
+  };
+
+  return <div>{project()}</div>;
 }
 
 function Sum1(props) {
@@ -33,15 +48,20 @@ function Sum1(props) {
   return (
     <div>
       <form>
-        <label>
-          Сум
-          <select onChange={(e) => setSumName(e.target.value)}>
-            <option></option>
-            <option value="Asum1">{Arhangai.sum1.name}</option>
-            <option value="Asum2">{Arhangai.sum2.name}</option>
-          </select>
-        </label>
-        <Bag SumNer={SumName} />
+        <Grid container direction="column" spacing={2}>
+          <Grid>
+            <InputLabel>Сум:</InputLabel>
+            <Select onChange={(e) => setSumName(e.target.value)}>
+              <MenuItem></MenuItem>
+              <MenuItem value="Asum1">{Arhangai.sum1.name}</MenuItem>
+              <MenuItem value="Asum2">{Arhangai.sum2.name}</MenuItem>
+            </Select>
+          </Grid>
+
+          <Grid item>
+            <Bag SumNer={SumName} />
+          </Grid>
+        </Grid>
       </form>
     </div>
   );
@@ -72,14 +92,13 @@ function Sum2(props) {
   return (
     <div>
       <form>
-        <label>
-          Сум
-          <select onChange={(e) => setSumName(e.target.value)}>
-            <option></option>
-            <option value="Hsum1">{Hentii.sum1.name}</option>
-            <option value="Hsum2">{Hentii.sum2.name}</option>
-          </select>
-        </label>
+        <InputLabel>Сум:</InputLabel>
+        <Select onChange={(e) => setSumName(e.target.value)}>
+          <MenuItem></MenuItem>
+          <MenuItem value="Hsum1">{Hentii.sum1.name}</MenuItem>
+          <MenuItem value="Hsum2">{Hentii.sum2.name}</MenuItem>
+        </Select>
+
         <Bag SumNer={SumName} />
       </form>
     </div>

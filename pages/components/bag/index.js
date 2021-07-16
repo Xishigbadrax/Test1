@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
+import { MenuItem } from "@material-ui/core";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
 export default function Bag(props) {
   const project = () => {
     switch (props.SumNer) {
@@ -43,15 +45,13 @@ function Bag1(props) {
   return (
     <div>
       <form>
-        <label>
-          Баг
-          <select>
-            <option></option>
-            <option value="lime">{Arhangai.sum1.bag1}</option>
-            <option value="lime">{Arhangai.sum1.bag2}</option>
-            <option value="lime">{Arhangai.sum1.bag3}</option>
-          </select>
-        </label>
+        <InputLabel>Баг:</InputLabel>
+        <Select>
+          <MenuItem></MenuItem>
+          <MenuItem value="lime">{Arhangai.sum1.bag1}</MenuItem>
+          <MenuItem value="lime">{Arhangai.sum1.bag2}</MenuItem>
+          <MenuItem value="lime">{Arhangai.sum1.bag3}</MenuItem>
+        </Select>
       </form>
     </div>
   );
@@ -81,15 +81,13 @@ function Bag3(props) {
   return (
     <div>
       <form>
-        <label>
-          Баг
-          <select>
-            <option></option>
-            <option value="lime">{Hentii.sum1.bag1}</option>
-            <option value="lime">{Hentii.sum1.bag2}</option>
-            <option value="lime">{Hentii.sum1.bag3}</option>
-          </select>
-        </label>
+        <InputLabel>Баг:</InputLabel>
+        <Select>
+          <MenuItem></MenuItem>
+          <MenuItem value="lime">{Hentii.sum1.bag1}</MenuItem>
+          <MenuItem value="lime">{Hentii.sum1.bag2}</MenuItem>
+          <MenuItem value="lime">{Hentii.sum1.bag3}</MenuItem>
+        </Select>
       </form>
     </div>
   );
@@ -119,15 +117,13 @@ function Bag4(props) {
   return (
     <div>
       <form>
-        <label>
-          Баг
-          <select>
-            <option></option>
-            <option value="lime">{Hentii.sum2.bag1}</option>
-            <option value="lime">{Hentii.sum2.bag2}</option>
-            <option value="lime">{Hentii.sum2.bag3}</option>
-          </select>
-        </label>
+        <InputLabel>Баг:</InputLabel>
+        <Select>
+          <MenuItem></MenuItem>
+          <MenuItem value="lime">{Hentii.sum2.bag1}</MenuItem>
+          <MenuItem value="lime">{Hentii.sum2.bag2}</MenuItem>
+          <MenuItem value="lime">{Hentii.sum2.bag3}</MenuItem>
+        </Select>
       </form>
     </div>
   );
@@ -157,15 +153,13 @@ function Bag2(props) {
   return (
     <div>
       <form>
-        <label>
-          Баг
-          <select>
-            <option></option>
-            <option value="lime">{Arhangai.sum2.bag1}</option>
-            <option value="lime">{Arhangai.sum2.bag2}</option>
-            <option value="lime">{Arhangai.sum2.bag3}</option>
-          </select>
-        </label>
+        <InputLabel>Баг:</InputLabel>
+        <Select>
+          <MenuItem></MenuItem>
+          <MenuItem value="lime">{Arhangai.sum2.bag1}</MenuItem>
+          <MenuItem value="lime">{Arhangai.sum2.bag2}</MenuItem>
+          <MenuItem value="lime">{Arhangai.sum2.bag3}</MenuItem>
+        </Select>
       </form>
     </div>
   );
